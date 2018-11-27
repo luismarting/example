@@ -1,0 +1,9 @@
+<div class="form-group">
+  <label for="nombre">Escribe tu nombre</label>
+  <input type="text" class="form-control" name="nombre" id="nombre"  placeholder="" 
+  #nombreLoc>
+  <!--[value]='nombre' (input)="nombre = $event.target.value"> -->
+</div> 
+<button type="button" class="btn btn-info" (click)="nombreLoc.value ='' ">Borrar</button>
+<button type="button" class="btn btn-success" (click)="nombreLoc.value = nombreLoc.value">Salvar</button>
+<p>hola {{nombreLoc.value}}</p>
