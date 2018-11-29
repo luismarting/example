@@ -9,6 +9,14 @@ import { TareasModule } from './tareas/tareas.module';
 import { AboutModule } from './about/about.module';
 import {FormsModule} from '@angular/forms'
 
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/es';
+import { BlogModule } from './blog/blog.module';
+import { CursoModule } from './curso/curso.module';
+
+// the second parameter 'es' is optional
+registerLocaleData(localeFr, 'es');
+
 @NgModule({
   declarations: [
     AppComponent
@@ -20,7 +28,9 @@ import {FormsModule} from '@angular/forms'
     HomeModule,
     TareasModule,
     AboutModule,
-    FormsModule
+    FormsModule,
+    BlogModule,
+    CursoModule    
   ],
   providers: [],
   bootstrap: [AppComponent]

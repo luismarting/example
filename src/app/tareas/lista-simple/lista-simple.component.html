@@ -6,7 +6,7 @@
 </div>
 <button type="button" class="btn btn-primary"
   (click)="addTarea()">Añadir</button>
-<div class="mt-3" *ngIf="aTareas.length">
+<div class="mt-3" *ngIf="aTareas.length;else msg">
   <h3>Lista tareas</h3>
   <ul class="list-group">
         <li *ngFor="let item of aTareas; let i = index" class="list-group-item row">
@@ -16,3 +16,6 @@
       </li>
   </ul>  
 </div>
+<ng-template #msg>
+ <p>animate a escribir algo</p>
+</ng-template>
